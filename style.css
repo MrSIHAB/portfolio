@@ -390,6 +390,10 @@ section {
 .right-skill h4{
     margin: 5rem;
     text-align: center;
+    background-image: linear-gradient( rgb(0, 0, 0), var(--theme-color));
+    -webkit-background-clip: text;
+    color: #eb9e9e00;
+    text-decoration: wavy;
 }
 .left-skill .skill-bar{
     align-items: center;
@@ -584,11 +588,17 @@ section {
     }
 
 
+
+    /* skills------//-----/---//--/- */
     .skill{
         display: flex;
         flex-direction: column;
     }
-
+    .left-skill h4,
+    .right-skill h4{
+        margin-bottom: 1rem;
+        background-color: ();
+}
 
 
 }
