@@ -1,7 +1,7 @@
 :root {
     --text-color: #f5f5f5;
     --bg-color: #09001a;
-    --bg-color2: #07232b;
+    --bg-color2: #00222b;
     --light-bg: floralwhite;
     --light-bg2: bisque;
     --theme-color: #12f7ff;
@@ -13,14 +13,13 @@
         0 0 70px #00ccff,
         /* 0 0 100px #00ccff, */
         0 0 150px #00ccff;
-
-    --big: 1rem;
+    --light-off: #2e325f;
+    /* --big: 1rem;
     --mid: 0.5rem;
-    --small: .25rem;
+    --small: .25rem; */
 }
 
 /* global diclaretion---//--------// */
-
 * {
     list-style: none;
     text-decoration: none;
@@ -49,7 +48,6 @@ span {
 }
 
 /* scroll bar--/------/------/-- */
-
 ::-webkit-scrollbar {
     height: 0;
     width: .5rem;
@@ -65,10 +63,9 @@ span {
 }
 
 /* Buttons-/-------/------/--- */
-
 .btn {
     display: inline-block;
-    font-weight: 500;
+    font-weight: 600;
     font-size: medium;
     position: relative;
     background-color: var(--bg-color);
@@ -102,7 +99,6 @@ span {
 }
 
 /* abbr -/-------/-------/ */
-
 abbr{
     cursor: help;
 }
@@ -142,34 +138,28 @@ header {
     font-weight: 700;
     align-items: center;
 }
-
 nav .navlist {
     display: flex;
     align-items: flex-end;
     gap: 2rem;
 }
-
 header a span {
     text-shadow: var(--neon-shadow);
 }
-
 .navlist li a {
     font-size: larger;
     font-weight: 700;
 
 }
-
 .navlist li a:hover {
     color: var(--theme-color);
     text-shadow: var(--neon-shadow);
 }
-
 header .button i {
     font-size: larger;
     display: none;
 
 }
-
 section {
     padding: 100px 10%;
 }
@@ -238,6 +228,8 @@ section {
 .mail-info h4 {
     margin-top: 1.5em;
 }
+
+
 .righthome .animaion {
     position: relative;
     top: -9%
@@ -254,6 +246,8 @@ section {
     box-shadow: 0 0 3px 3px 3px var(--theme-color);
     animation: img 5s linear infinite;
 }
+
+
 
 
 
@@ -290,6 +284,8 @@ section {
     font-size: 1rem;
     font-weight: 500;
 }
+
+
 .about .emptyDiv div {
     text-align: center;
     border: 3px solid rgb(56, 246, 129);
@@ -318,6 +314,9 @@ section {
     right: 4%;
     bottom: -140%;
 }
+
+
+
 
 
 
@@ -386,8 +385,7 @@ section {
     padding-bottom: 0;
     color: var(--theme-color);
 }
-.left-skill h4,
-.right-skill h4{
+.skill > div h4{
     margin: 4rem;
     text-align: center;
     background-image: linear-gradient( rgba(0, 0, 0, 0), var(--theme-color));
@@ -400,7 +398,7 @@ section {
     display: grid;
     grid-template-columns: 15% 75% 10%;
     gap: 2%;
-    margin: 1.5rem 0;
+    margin: 3rem 0;
 
 
 }
@@ -425,7 +423,7 @@ section {
     height: 100%;
     width: 0%;
     background-color: var(--theme-color);
-    box-shadow: 0 0 4px 1px var(--theme-color);
+    box-shadow: 0 0 2px 1px var(--theme-color);
     border-radius: 10px;
     animation: bar 3s ease-out;
 }
@@ -446,14 +444,14 @@ section {
     border-radius: 5px;
 }
 
+/* Right side///// */
 .prof{
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
 .box{
     position: relative;
-    margin: 10px 0;
-    /* flex: 1 1 15rem; */
+    margin-bottom: 1.5rem;
 }
 .box .text {
     text-align: center;
@@ -461,7 +459,7 @@ section {
     font-size: 1rem;
 }
 .box .text big{
-    font: 400;
+    font-weight: 400;
     letter-spacing: 1px;
     position: absolute;
     top: 40%;
@@ -474,21 +472,55 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid;
+    /* border: 2px solid saddlebrown; */
 }
 .box .text small{
     font-weight: 600;
     display: block;
 }
-.circle .point{
+.circle .points{
     width: 2px;
     height: 10px;
-    background-color: var(--bg-color2);
+    background-color: var(--light-off);
+    /* background-color: var(--theme-color); */
     position: absolute;
     border-radius: 3px;
-    transform: rotate(calc(var(--i)*120deg)) translateY(-45px);
-    animation: glow 0.04s linear forwards;
+    transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
 }
+.points.marked{
+    animation: glow 0.04s linear forwards;
+    animation-delay: calc(var(--i)*0.05s);
+}
+
+
+
+
+
+
+
+/* portfolio secton --//--------------//-----------//---------// */
+
+.portfolio{
+    height: 100vh;
+    min-height: 100%;
+    max-height: fit-content;
+    width: 100%;
+    background: var(--bg-color2);
+    text-align: center;
+
+}
+.portfolio p{
+    font-size: small;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -569,7 +601,18 @@ section {
     }
 }
 
-
+@keyframes glow{
+    0%{
+        background: var(--light-off);
+        box-shadow: none;
+    }
+    100%{
+        background: var(--theme-color);
+        box-shadow: 0 0 2px 1px #27dfff59;
+        /* box-shadow: var(--box-shadow); */
+    }
+    
+}
 
 
 
