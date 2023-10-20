@@ -137,7 +137,7 @@ header {
     width: 100%;
     font-weight: 700;
     align-items: center;
-    /* position: sticky; */
+    position: sticky;
     top: 0;
     z-index: 999;
 }
@@ -186,9 +186,7 @@ section {
 }
 .lefthome,
 .righthome {
-    /* background-color: #051835c0; */
     width: 100%;
-    height: 100vh;
 }
 .lefthome {
     max-width: 100%;
@@ -237,26 +235,21 @@ section {
 .righthome .animaion {
     top: 0;
     position: relative;
-    align-items: center;
-    margin: auto;
-
+    width: 100%;
 }
 .animaion svg{
     display: block;
 }
-.righthome{
-    position: relative;
-}
 .righthome img{
     position: absolute;
-    top: 0%;
-    /* right: 25%; */
-    height: 85%;
+    top: -9%;
     border-radius: 50%;
+    left: 15%;
     box-shadow: 0 0 3px 3px 3px var(--theme-color);
     animation: img 5s linear infinite;
-    display: block;
-    margin: auto;
+    /* display: block;
+    margin: auto; */
+    width: 70%;
 }
 
 
@@ -297,7 +290,12 @@ section {
     font-weight: 500;
 }
 
-
+.emptyDiv{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: block;
+}
 .about .emptyDiv div {
     text-align: center;
     border: 3px solid rgb(56, 246, 129);
@@ -308,23 +306,22 @@ section {
     /* border-radius: 20% 30% 40% 50%; */
     font-weight: 400;
     font-size: .6rem;
-    display: block;
     position: absolute;
     box-shadow: var(--box-shadow);
     opacity: .2;
     animation: about 6s linear infinite;
 }
 .about .accuracy {
-    right: 41%;
-    bottom: -133%;
+    top: 80%;
+    left: 0;
 }
 .about .raw {
-    right: 15%;
-    bottom: -80%;
+    right: -3%;
+    bottom: 3%;
 }
 .about .exp {
     right: 4%;
-    bottom: -140%;
+    top: -5%;
 }
 
 
@@ -539,8 +536,7 @@ section {
 }
 .portfolio .card-box .card{
     border: 2px solid var(--theme-color);
-    height: 15rem;
-    /* aspect-ratio: 4/3; */
+    aspect-ratio: 4/3;
     width: 20rem;
     border-radius: 15px;
     position: relative;
@@ -684,7 +680,6 @@ section {
     }
 }
 
-
 @keyframes bar{
     0% {
         width: 0;
@@ -738,6 +733,11 @@ section {
 
 /* Media Qurease////---------------///---------------//-------- */
 
+@media (max-width: 1000px) {
+    header{
+        font-size: small;
+    }
+}
 
 @media (max-width: 800PX) {
 
@@ -819,7 +819,12 @@ section {
     .right-skill h4{
         margin-bottom: 1rem;
         background-color: ();
-}
+    }
+
+    /* portfolio -//------------// */
+    .portfolio .card-box .card{
+        width: 100%;
+    }
 
 
 }
