@@ -131,12 +131,15 @@ abbr[title]:hover::after{
 header {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2em;
-    background-color: rgba(0, 0, 0, 0.032);
+    padding: .5rem 2em;
+    background-color: rgba(8, 1, 33, 0.897);
     min-width: 90vw;
     width: 100%;
     font-weight: 700;
     align-items: center;
+    /* position: sticky; */
+    top: 0;
+    z-index: 999;
 }
 nav .navlist {
     display: flex;
@@ -178,6 +181,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    padding-top: 10%;
     grid-gap: 4em;
 }
 .lefthome,
@@ -231,20 +235,28 @@ section {
 
 
 .righthome .animaion {
+    top: 0;
     position: relative;
-    top: -9%
+    align-items: center;
+    margin: auto;
+
+}
+.animaion svg{
+    display: block;
 }
 .righthome{
     position: relative;
 }
 .righthome img{
     position: absolute;
-    top: -2%;
-    right: 25%;
-    height: 65%;
+    top: 0%;
+    /* right: 25%; */
+    height: 85%;
     border-radius: 50%;
     box-shadow: 0 0 3px 3px 3px var(--theme-color);
     animation: img 5s linear infinite;
+    display: block;
+    margin: auto;
 }
 
 
@@ -349,8 +361,14 @@ section {
     border: 1px solid;
     border-radius: 15px;
     padding: 2rem;
-    aspect-ratio: 3/3;
+    /* aspect-ratio: 3/3; */
+    transition: all .3s;
+    position: relative;
+    top: 0;
 
+}
+.service article .card:hover{
+    top: -5%
 }
 .service article .card img {
     /* filter: invert(1); */
@@ -381,12 +399,12 @@ section {
 .skill>h1{
     grid-column: 1 / 3;
     text-align: center;
-    padding: 5rem;
+    padding-top: 5rem;
     padding-bottom: 0;
     color: var(--theme-color);
 }
 .skill > div h4{
-    margin: 4rem;
+    margin-bottom: 4rem;
     text-align: center;
     background-image: linear-gradient( rgba(0, 0, 0, 0), var(--theme-color));
     -webkit-background-clip: text;
@@ -501,7 +519,6 @@ section {
 /* portfolio secton --//--------------//-----------//---------// */
 
 .portfolio{
-    height: 100vh;
     min-height: 100%;
     max-height: fit-content;
     width: 100%;
@@ -512,8 +529,84 @@ section {
 .portfolio p{
     font-size: small;
 }
+.portfolio .card-box{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 4rem 0;
 
+}
+.portfolio .card-box .card{
+    border: 2px solid var(--theme-color);
+    height: 15rem;
+    /* aspect-ratio: 4/3; */
+    width: 20rem;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.portfolio .card-box .card .img-box{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.portfolio .card-box .card img{
+    /* display: none; */
+    width: 100%;
+    border-radius: 5%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s;
+}
 
+.portfolio .card-box .card .info{
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#0000, var(--theme-color));
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 1s;
+}
+.portfolio .card-box .card .info h5{
+    z-index: 5;
+    font-size: large;
+}
+.portfolio .card-box .card .info p{
+    display: block;
+    font-size: small;
+    margin-top: 10%;
+}
+.portfolio .card-box .card .info .btn{
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    margin: 5%;
+    background: #fff;
+    text-shadow: 0 0 5px 6px black;
+}
+.portfolio .card-box .card .info .btn:hover {
+    filter: hue-rotate(-40deg);
+    box-shadow: 0 0 15px 2px black;
+
+}
+.portfolio .card-box .card .info .btn i{
+    color: #000;
+    transition: all .5s;
+}
+.portfolio .card-box .card:hover img{
+    transform: scale(1.1);
+    opacity: .5;
+}
+.portfolio .card-box .card:hover .info{
+    opacity: 1;
+}
 
 
 
@@ -646,25 +739,62 @@ section {
 /* Media Qurease////---------------///---------------//-------- */
 
 
-@media (max-width: 700PX) {
+@media (max-width: 800PX) {
 
     /* header------//------//------// */
     header .navlist {
         display: none;
+        
     }
-
+    header{
+        font-size: small;
+    }
 
     /* home------//------//------// */
     .home {
         display: flex;
         flex-direction: column-reverse;
         height: auto;
+        font-size: smaller;
     }
-
+    .lefthome h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    
+    }
+    .lefthome p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .lefthome p span {
+        font-weight: 600;
+    }
     .righthome,
     .lefthome {
         height: unset;
     }
+
+
+    /* About------//------//------// */
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+        background-position: center;
+    }
+    .about .about-info h1{
+        font-size: x-large;
+    }
+    .about .about-info .btn{
+        margin-top: 4rem;
+    }
+    .about .about-info{
+        padding: 1rem;
+    }
+    .emptyDiv{
+        display: none;
+    }
+
+
 
 
     /* services------//------//------// */
