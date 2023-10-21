@@ -433,7 +433,7 @@ section {
     width: 100%;
     position: relative;
 }
-.left-skill .skill-bar .bar span{
+.left-skill .skill-bar .bar .run{
     position: absolute;
     height: 100%;
     width: 0%;
@@ -448,7 +448,7 @@ section {
 .left-skill .skill-bar .bar .graphics{width: 63%;}
 .left-skill .skill-bar .bar .seo{width: 95%;}
 
-.left-skill .skill-bar .bar span::after{
+.left-skill .skill-bar .bar .run::after{
     position: absolute;
     background-color: #cbfdfa;
     height: 100%;
@@ -541,6 +541,11 @@ section {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    transition: all .1s;
+}
+.portfolio .card-box .card:hover{
+    box-shadow: var(--box-shadow);
+    /* box-shadow: var(--neon-shadow); */
 }
 .portfolio .card-box .card .img-box{
     height: 100%;
@@ -553,7 +558,7 @@ section {
     border-radius: 5%;
     height: 100%;
     object-fit: cover;
-    transition: all .5s;
+    transition: all 2s ease-out;
 }
 
 .portfolio .card-box .card .info{
@@ -597,12 +602,83 @@ section {
     transition: all .5s;
 }
 .portfolio .card-box .card:hover img{
-    transform: scale(1.1);
+    transform: scale(1.2);
     opacity: .5;
 }
 .portfolio .card-box .card:hover .info{
     opacity: 1;
 }
+
+
+
+
+
+/* contact-------//-------------------//---------------------//--------------------//---------// */
+.contact{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.contact p{
+    font-size: x-small;
+}
+.contact-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 1.5rem;
+}
+.contact-box input,
+.contact-box textarea
+{
+    padding: 1rem;
+    color: var(--theme-color);
+    background: transparent;
+    font-weight: 500;
+    border-radius: 12px;
+    border-width: 2px;
+    border-color: var(--theme-color);
+    font-size: medium;
+    resize: none;
+    line-height: 1.5rem;
+}
+input:focus{
+    border: 3px solid red;
+    border: none;
+}
+.contact-box .btn{
+    width: 200px;
+    margin: auto;
+}
+
+
+
+
+
+/* footer -------------//--------------//-----------------/---------------//----------//------- */
+
+footer{
+    background: #000;
+    padding: 1rem 10vw 2rem 10vw;
+}
+footer a {
+    color: var(--theme-color);
+}
+
+.credit ul li{
+    list-style: disc;
+    /* padding-left: 2rem; */
+
+}
+.credit ul{
+    padding-left: 1rem;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 
 
