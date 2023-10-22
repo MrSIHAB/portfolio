@@ -146,21 +146,21 @@ nav .navlist {
     align-items: flex-end;
     gap: 2rem;
 }
-header a span {
-    text-shadow: var(--neon-shadow);
-}
-.navlist li a {
+.navlist li a,
+header .button i{
     font-size: larger;
     font-weight: 700;
 
 }
-.navlist li a:hover {
+.navlist li a:hover,
+header .button i:hover {
     color: var(--theme-color);
     text-shadow: var(--neon-shadow);
 }
-header .button i {
-    font-size: larger;
+header .button{
     display: none;
+    width: 2rem;
+    font-size: large;
 
 }
 section {
@@ -230,8 +230,30 @@ section {
 .mail-info h4 {
     margin-top: 1.5em;
 }
-
-
+.social{
+    display: flex;
+    align-items: center;
+}
+.social .btn{
+    aspect-ratio: 1/1;
+    width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.07rem;
+}
+.social .btn i{
+    color: var(--light-bg);
+}
+.fiverr{
+    content: url(img/fiverr.png);
+    filter: invert();
+    width: 20px;
+}
+.danbo{
+    content: url(img/Danbo_figma.svg);
+    width: 20px;
+}
 .righthome .animaion {
     top: 0;
     position: relative;
@@ -777,7 +799,11 @@ footer a {
     }
     
 }
-
+@keyframes nav {
+    0%{
+        top: -75vh;
+    }
+}
 
 
 
@@ -818,13 +844,32 @@ footer a {
 @media (max-width: 800PX) {
 
     /* header------//------//------// */
-    header .navlist {
+
+    header .navlist{
         display: none;
-        
+        position: absolute;
+        background: linear-gradient(rgba(8, 1, 33, 0.897), var(--bg-color2));
+        width: 100%;
+        top: 3.45rem;
+        right: 0;
+        height: 75vh;
+        text-align: center;
+        animation: nav 1s forwards;
     }
+    header .navlist li {
+        padding: calc(1.5rem);
+    }
+
     header{
         font-size: small;
     }
+    header .button{
+        display: block;
+        cursor: pointer;
+    }
+
+
+
 
     /* home------//------//------// */
     .home {

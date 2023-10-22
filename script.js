@@ -10,13 +10,13 @@ function Slider() {
 setInterval(Slider , 2000);
 
 
+
+
+
 // Skill > Circle --------------//-----------///------------///
 
 const circle = document.querySelectorAll('.circle');
 const skill = document.querySelectorAll(".skill")
-
-////////////////////////////////////////////
-
 
 function isElementInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -70,3 +70,19 @@ window.addEventListener("scroll", handleScroll);
 window.addEventListener("scroll", handleScroll2);
 
 
+
+
+// navigation button -------------------//-------------//------------------//-------------/------------------//----
+
+const navbtn = document.getElementById("navbtn");
+const navli = document.querySelector('.navlist');
+
+function togglehide(){
+    if (navli.style.display == 'none') {
+        navli.style.display='block'
+    } else {
+        navli.style.display = 'none'
+    }
+}
+
+navbtn.addEventListener('click', togglehide)
