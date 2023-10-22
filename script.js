@@ -1,5 +1,5 @@
 const changingText = document.getElementById("changingText");
-const cngArray = ['Graphix Desiner', 'YouTuber', 'Web Developer', 'Logo Maker', 'Web Designer', 'Frontent Developer', 'Digital Marketer'];
+const cngArray = ['Graphixs Desiner', 'Web Developer', 'Logo Maker', 'Web Designer', 'Frontent Developer', 'Good Editor'];
 let currentIndex = 0
 
 function Slider() {
@@ -42,7 +42,7 @@ circle.forEach(elem => {
 
     elem.innerHTML = points;
 
-    function handleScroll(){
+    window.addEventListener('scroll' , function handleScroll(){
         circle.forEach(element => {
             if (isElementInViewport(element)) {
                 const pointMarked = elem.querySelectorAll('.points');
@@ -52,21 +52,19 @@ circle.forEach(elem => {
                 }
             }
         });
-    }
-    window.addEventListener('scroll' , handleScroll)
+    })
+    
 })
 
 const bar = document.querySelectorAll(".fillBar");
-function handleScroll2() {
+window.addEventListener('scroll' , function handleScroll2() {
     bar.forEach(element => {
         if (isElementInViewport(element)) {
             element.classList.add('run')
 
         }
     })
-}
-
-window.addEventListener("scroll", handleScroll2);
+})
 
 
 
