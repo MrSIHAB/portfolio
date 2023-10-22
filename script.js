@@ -85,4 +85,7 @@ function togglehide(){
     }
 }
 
-navbtn.addEventListener('click', togglehide)
+navbtn.addEventListener('click', togglehide);
+window.addEventListener('scroll' ,function scrollhide() {
+    navli.style.display = 'none';
+});
