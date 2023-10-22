@@ -853,7 +853,11 @@ footer a {
 
     /* header------//------//------// */
 
+    header{
+        font-size: small;
+    }
     header .navlist{
+        z-index: -1;
         display: none;
         position: absolute;
         background: linear-gradient(rgba(8, 1, 33, 0.897), var(--bg-color2));
@@ -862,18 +866,15 @@ footer a {
         right: 0;
         height: 75vh;
         text-align: center;
-        animation: nav 1s forwards;
+        animation: nav .5s forwards;
     }
     header .navlist li {
         padding: calc(1.5rem);
     }
-
-    header{
-        font-size: small;
-    }
     header .button{
         display: block;
         cursor: pointer;
+        z-index: 555;
     }
 
 
