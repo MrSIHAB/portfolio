@@ -101,18 +101,22 @@ span {
 /* abbr -/-------/-------/ */
 abbr{
     cursor: help;
+    display: block;
+    position: relative;
+    text-align: center;
 }
 abbr:hover{
-    position: relative;
-    color: #0000;
+     color: #0000;
 }
-abbr[title]::after{
+abbr[title]::before{
     transition: all 1s;
-
-}
-abbr[title]:hover::after{
     position: absolute;
-    left: -300%;
+    text-align: center;
+    width: 100%;
+   
+}
+abbr[title]:hover::before{
+    left: 0;
     text-wrap: nowrap;
     content: "" attr(title) "";
     color:violet;
