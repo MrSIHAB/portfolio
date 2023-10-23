@@ -42,7 +42,7 @@ circle.forEach(elem => {
 
     elem.innerHTML = points;
 
-    window.addEventListener('scroll' , function handleScroll(){
+    window.addEventListener('scroll' , async function handleScroll(){
         circle.forEach(element => {
             if (isElementInViewport(element)) {
                 const pointMarked = elem.querySelectorAll('.points');
@@ -57,7 +57,7 @@ circle.forEach(elem => {
 })
 
 const bar = document.querySelectorAll(".fillBar");
-window.addEventListener('scroll' , function handleScroll2() {
+window.addEventListener('scroll' , async function handleScroll2() {
     bar.forEach(element => {
         if (isElementInViewport(element)) {
             element.classList.add('run')
