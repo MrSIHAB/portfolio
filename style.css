@@ -7,16 +7,11 @@
     --theme-color: #12f7ff;
     --box-shadow: 0 0 .2rem 2px #12f7ff;
     --neon-shadow: 0 0 10px #00f2ff,
-        0 0 30px #00ccff,
-        0 0 40px #00ccff,
-        /* 0 0 60px #00ccff, */
-        0 0 70px #00ccff,
-        /* 0 0 100px #00ccff, */
-        0 0 150px #00ccff;
+        0 0 30px #0cf,
+        0 0 40px #0cf,
+        0 0 70px #0cf,
+        0 0 150px #0cf;
     --light-off: #2e325f;
-    /* --big: 1rem;
-    --mid: 0.5rem;
-    --small: .25rem; */
 }
 
 /* global diclaretion---//--------// */
@@ -38,7 +33,7 @@ body {
     background-color: var(--bg-color);
 }
 ::selection {
-    color: #000321;
+    color: var(--bg-color);
     background-color: var(--theme-color);
 }
 span {
@@ -138,7 +133,7 @@ header {
     padding: .5rem 2em;
     background-color: rgba(8, 1, 33, 0.897);
     min-width: 90vw;
-    width: 100%;
+    width: 100%;    
     font-weight: 700;
     align-items: center;
     position: sticky;

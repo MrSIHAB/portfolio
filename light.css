@@ -1,0 +1,31 @@
+:root {
+    --text-color: #09001a;
+    --bg-color: floralwhite;
+    --bg-color2: bisque;
+    --light-bg: #09001a;
+    --theme-color: #00bf7f;
+    --box-shadow: 0 0 .2rem 2px #12f7ff;
+    --neon-shadow: 0 0 10px #00f2ff,
+        0 0 30px #00ccff,
+        0 0 40px #00ccff,
+        0 0 70px #00ccff,
+        0 0 150px #00ccff;
+    --light-off: #0fc;
+    --box-shadow: none;
+    --neon-shadow: none;
+}
+*{
+    color: initial;
+    /* text-shadow: 0 0 1px #000; */
+}
+header{
+    color: var(--bg-color2);
+}
+.fiverr{
+    filter: invert(0);
+}
+.danbo{
+    box-shadow: 1px solid var(--light-bg);
+    filter: invert(0);
+}
+.
