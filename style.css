@@ -162,6 +162,11 @@ header .button{
     font-size: large;
 
 }
+
+#light{
+    cursor: pointer;
+    font-size: large;
+}
 section {
     padding: 100px 10%;
 }
@@ -862,12 +867,12 @@ footer .btn{
         width: 100%;
         top: 3.45rem;
         right: 0;
-        height: 75vh;
+        height: 80vh;
         text-align: center;
         animation: nav .5s forwards;
     }
     header .navlist li {
-        padding: calc(1.5rem);
+        padding: calc(3vh);
     }
     header .button{
         display: block;

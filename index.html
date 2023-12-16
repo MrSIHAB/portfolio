@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A passionate web developer with a keen eye for detail and a love for all
     things digital. I thrive on turning innovative ideas into functional, user-friendly websites.">
-<!-- other ---------- -->
-    <link rel="preload" href="https://sbstudio.netlify.app/img/portfolio.png" as="fetch">
+    <!-- other ---------- -->
     <link rel="image_src" href="https://sbstudio.netlify.app/img/portfolio.png">
     <link itemprop="thumbnailUrl" href="https://sbstudio.netlify.app/img/portfolio.png">
     <meta name="google-site-verification" content="PNI_HrZILOiSkgzy4AJpG5istIkQxB04BW5anGmKrj0" />
@@ -33,23 +32,22 @@
     <meta name="twitter:description" content="Portfolio website of Shoaib Hossain SIHAB. Web Developer| Graphics Developer| Software Engineer.">
 
     <link rel="apple-touch-icon" href="img/sb.png">
-    
     <link rel="shortcut icon" type="image/png" href="img/code.png" />
     <link rel=icon" type="image/png" href="img/code.png" />
     <link rel=icon" type="image/png" href="img/sb.png" />
     <title>SB studio || Portfolio </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" id="light-theme">
     <!-- <link rel="stylesheet" href="light.css"> -->
-    <link id="light-theme">
     <script src="https://kit.fontawesome.com/19c66b87c5.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
 </head>
 
 <body>
-
+    
+    <!-- <div id="light-theme"></div> -->
     <!-- header section --------------------// -----------------------// -------//----->
     <header>
         <h1><a href="#"><span>SB</span> Studio.</a></h1>
@@ -62,6 +60,7 @@
                 <li><a href="#skill">Skills</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <div id="light" onclick="theme()"><i class="fa-solid fa-circle-half-stroke fa-spin"></i></i></div>
             </ul>
         </nav>
     </header>
@@ -356,7 +355,6 @@
     </section>
 
     
-
     <!-- footer -------------//--------------------//----------------------//---------------------//--- -->
     <footer>
 

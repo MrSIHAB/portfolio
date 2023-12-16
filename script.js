@@ -1,5 +1,5 @@
 const changingText = document.getElementById("changingText");
-const cngArray = ['Graphixs Desiner', 'Web Developer', 'Logo Maker', 'Web Designer', 'Frontent Developer', 'Good Editor'];
+const cngArray = ['Graphics Designer', 'Web Developer', 'Logo Maker', 'Web Designer', 'Frontent Developer', 'Video Editor', 'Full stack Developer', 'Backend Developer', 'Degital Marketer'];
 let currentIndex = 0
 
 function Slider() {
@@ -48,7 +48,7 @@ circle.forEach(elem => {
                 const pointMarked = elem.querySelectorAll('.points');
                 for (let s = 0; s < parcent; s++) {
                     pointMarked[s].classList.add('marked');
-                    console.log(pointMarked[s])
+                    // console.log(pointMarked[s])
                 }
             }
         });
@@ -89,3 +89,28 @@ window.addEventListener('scroll', navhide = ()=>{
         navli.style.display = 'none';
     }
 });
+
+
+// light theme ///////////////////////////////////////////////////////////////
+const lightTheme = document.getElementById("light-theme");
+const lightbtn = document.getElementById('light')
+console.log(lightTheme)
+
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    lightTheme.innerHTML = `<link rel="stylesheet" href="style.css">`    
+} else {
+    lightTheme.innerHTML = `<link rel="stylesheet" href="light.css">`;
+}
+
+
+
+// lightTheme.innerHTML = '<link rel="stylesheet" href="light.css" id="light-theme">'
+function theme(){
+    if (lightTheme.href == "style.css") {
+        lightTheme.href = "light.css"
+    } else {
+        lightTheme.href = "style.css"
+    }
+}
+lightbtn.addEventListener('click', theme)
