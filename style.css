@@ -1,7 +1,7 @@
 :root {
     --text-color: #f5f5f5;
     --bg-color: #09001a;
-    --bg-color2: #00222b;
+    --bg-color2: #00132b6c;
     --light-bg: floralwhite;
     --light-bg2: bisque;
     --theme-color: #12f7ff;
@@ -40,6 +40,9 @@ span {
     color: var(--theme-color);
     transition: all 1s;
 
+}
+section{
+    background: linear-gradient(var(--bg-color), var(--bg-color2));
 }
 
 /* scroll bar--/------/------/-- */
@@ -293,8 +296,8 @@ section {
     min-height: 100vh;
     height: 100%;
     width: 100%;
-    background: var(--bg-color2) url(img/myimg.jpg);
-    background-color: #030a2e;
+    /* background: var(--bg-color2) url(img/myimg.jpg); */
+    /* background-color: #030a2e; */
     background-size: cover;
     background-blend-mode: overlay;
     display: grid;
@@ -363,7 +366,7 @@ section {
 /* service--------------//-----------------//--------------//----------//---//----//--// */
 
 .service {
-    background-color: var(--bg-color2);
+    /* background-color: var(--bg-color2); */
     min-height: 110vh;
 }
 .service>p{
@@ -441,7 +444,7 @@ section {
 .left-skill .skill-bar{
     align-items: center;
     display: grid;
-    grid-template-columns: 15% 75% 10%;
+    grid-template-columns: 20% 75% 5%;
     gap: 2%;
     margin: 3rem 0;
 
@@ -472,11 +475,11 @@ section {
     border-radius: 10px;
     animation: bar 3s ease-out;
 }
-.left-skill .skill-bar .bar .html{width: 87%;}
-.left-skill .skill-bar .bar .css{width: 90%;}
-.left-skill .skill-bar .bar .js{width: 60%;}
-.left-skill .skill-bar .bar .graphics{width: 63%;}
-.left-skill .skill-bar .bar .seo{width: 95%;}
+.left-skill .skill-bar .bar .frontend{width: 85%;}
+.left-skill .skill-bar .bar .wp{width: 80%;}
+.left-skill .skill-bar .bar .node{width: 70%;}
+.left-skill .skill-bar .bar .php{width: 90%;}
+.left-skill .skill-bar .bar .seo{width: 70%;}
 
 .left-skill .skill-bar .bar .run::after{
     position: absolute;
@@ -500,7 +503,7 @@ section {
 }
 .box .text {
     text-align: center;
-    color: ;    
+    /* color: ;     */
     font-size: 1rem;
 }
 .box .text big{
@@ -534,7 +537,7 @@ section {
 }
 .points.marked{
     animation: glow 0.04s linear forwards;
-    animation-delay: calc(var(--i)*0.08s);
+    animation-delay: calc(var(--i)*0.03s);
 }
 
 
@@ -549,7 +552,7 @@ section {
     min-height: 100%;
     max-height: fit-content;
     width: 100%;
-    background: var(--bg-color2);
+    /* background: var(--bg-color2); */
     text-align: center;
 
 }
@@ -573,10 +576,6 @@ section {
     overflow: hidden;
     transition: all .1s;
 }
-.portfolio .card-box .card:hover{
-    box-shadow: var(--box-shadow);
-    /* box-shadow: var(--neon-shadow); */
-}
 .portfolio .card-box .card .img-box{
     height: 100%;
     width: 100%;
@@ -588,7 +587,7 @@ section {
     border-radius: 5%;
     height: 100%;
     object-fit: cover;
-    transition: all 2s ease-out;
+    transition: all 1s ease-in-out;
 }
 
 .portfolio .card-box .card .info{
@@ -613,6 +612,7 @@ section {
     display: block;
     font-size: small;
     margin-top: 10%;
+    font-weight: 500;
 }
 .portfolio .card-box .card .info .btn{
     border-radius: 50%;
@@ -620,20 +620,17 @@ section {
     width: 4rem;
     margin: 5%;
     background: #fff;
-    text-shadow: 0 0 5px 6px black;
 }
 .portfolio .card-box .card .info .btn:hover {
-    filter: hue-rotate(-40deg);
-    box-shadow: 0 0 15px 2px black;
-
+    background-color: var(--theme-color);
 }
 .portfolio .card-box .card .info .btn i{
     color: #000;
     transition: all .5s;
 }
 .portfolio .card-box .card:hover img{
-    transform: scale(1.2);
-    opacity: .5;
+    transform: scale(1.3);
+    opacity: .3;
 }
 .portfolio .card-box .card:hover .info{
     opacity: 1;
@@ -953,7 +950,9 @@ footer .btn{
         margin-bottom: 1rem;
         background-color: ();
     }
-
+    .skill .left-skill p{
+        font-size: 11px;
+    }
     /* portfolio -//------------// */
     .portfolio .card-box .card{
         width: 100%;
@@ -961,3 +960,13 @@ footer .btn{
 
 
 }
+
+
+
+
+
+
+
+
+
+

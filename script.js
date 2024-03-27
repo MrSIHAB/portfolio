@@ -1,5 +1,5 @@
 const changingText = document.getElementById("changingText");
-const cngArray = ['Graphics Designer', 'Web Developer', 'Logo Maker', 'Web Designer', 'Frontent Developer', 'Video Editor', 'Full stack Developer', 'Backend Developer', 'Degital Marketer'];
+const cngArray = ['Web Developer', 'Graphics Designer', 'Web Designer', 'Frontend Developer', 'Full stack Developer', 'Backend Developer', 'Degital Marketer', 'On Page SEO Expert'];
 let currentIndex = 0
 
 function Slider() {
