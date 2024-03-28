@@ -623,6 +623,7 @@ section {
 }
 .portfolio .card-box .card .info .btn:hover {
     background-color: var(--theme-color);
+    box-shadow: none;
 }
 .portfolio .card-box .card .info .btn i{
     color: #000;
