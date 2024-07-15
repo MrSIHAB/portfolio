@@ -1,116 +1,132 @@
 const changingText = document.getElementById("changingText");
-const cngArray = ['Web Developer', 'Graphics Designer', 'Web Designer', 'Frontend Developer', 'Full stack Developer', 'Backend Developer', 'Degital Marketer', 'On Page SEO Expert'];
-let currentIndex = 0
+const cngArray = [
+  "Web Development",
+  "Frontend Development",
+  "Backend Development",
+  "Mobile app Development",
+  "Full stack",
+  "Cross Platform App",
+  "Desktop app Development",
+  "Flutter",
+  "FrameWorks",
+  "E-commerce",
+  "Git/GitHab",
+  "Docker",
+  "DataBases",
+  "Server Structure",
+  "Linux",
+];
+let currentIndex = 0;
 
 function Slider() {
-    changingText.textContent = cngArray[currentIndex];
-    currentIndex = (currentIndex + 1) % cngArray.length;
+  changingText.textContent = cngArray[currentIndex];
+  currentIndex = (currentIndex + 1) % cngArray.length;
 }
 
 setInterval(Slider, 2000);
 
-
-
-
-
 // Skill > Circle --------------//-----------///------------///
 
-const circle = document.querySelectorAll('.circle');
+const circle = document.querySelectorAll(".circle");
 const skill = document.querySelectorAll(".skill");
 
 function isElementInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 }
 
-circle.forEach(elem => {
-    var dots = elem.getAttribute("data-dots");
-    var marked = elem.getAttribute("data-percent");
-    var parcent = Math.floor(dots * marked / 100)
-    var points = "";
-    var rotate = 360 / dots;
+circle.forEach((elem) => {
+  var dots = elem.getAttribute("data-dots");
+  var marked = elem.getAttribute("data-percent");
+  var parcent = Math.floor((dots * marked) / 100);
+  var points = "";
+  var rotate = 360 / dots;
 
-    for (let i = 0; i < dots; i++) {
-        points += `<div class="points" style="--i:${i}; --rot:${rotate}deg;"></div>`
+  for (let i = 0; i < dots; i++) {
+    points += `<div class="points" style="--i:${i}; --rot:${rotate}deg;"></div>`;
+  }
 
-    }
+  elem.innerHTML = points;
 
-    elem.innerHTML = points;
-
-    window.addEventListener('scroll' , async function handleScroll(){
-        circle.forEach(element => {
-            if (isElementInViewport(element)) {
-                const pointMarked = elem.querySelectorAll('.points');
-                for (let s = 0; s < parcent; s++) {
-                    pointMarked[s].classList.add('marked');
-                    // console.log(pointMarked[s])
-                }
-            }
-        });
-    })
-    
-})
+  window.addEventListener("scroll", async function handleScroll() {
+    circle.forEach((element) => {
+      if (isElementInViewport(element)) {
+        const pointMarked = elem.querySelectorAll(".points");
+        for (let s = 0; s < parcent; s++) {
+          pointMarked[s].classList.add("marked");
+          // console.log(pointMarked[s])
+        }
+      }
+    });
+  });
+});
 
 const bar = document.querySelectorAll(".fillBar");
-window.addEventListener('scroll' , async function handleScroll2() {
-    bar.forEach(element => {
-        if (isElementInViewport(element)) {
-            element.classList.add('run')
-
-        }
-    })
-})
-
-
-
+window.addEventListener("scroll", async function handleScroll2() {
+  bar.forEach((element) => {
+    if (isElementInViewport(element)) {
+      element.classList.add("run");
+    }
+  });
+});
 
 // navigation button -------------------//-------------//------------------//-------------/------------------//----
 
 const navbtn = document.getElementById("navbtn");
-const navli = document.querySelector('.navlist');
+const navli = document.querySelector(".navlist");
 
 function togglehide() {
-    if (navli.style.display == 'none') {
-        navli.style.display = 'block'
-    } else {
-        navli.style.display = 'none'
-    }
+  if (navli.style.display == "none") {
+    navli.style.display = "block";
+  } else {
+    navli.style.display = "none";
+  }
 }
 
-navbtn.addEventListener('click', togglehide);
+navbtn.addEventListener("click", togglehide);
 
-window.addEventListener('scroll', navhide = ()=>{
-    if (navli.style.display === 'block') {
-        navli.style.display = 'none';
+window.addEventListener(
+  "scroll",
+  (navhide = () => {
+    if (navli.style.display === "block") {
+      navli.style.display = "none";
     }
-});
-
+  })
+);
 
 // light theme ///////////////////////////////////////////////////////////////
 const lightTheme = document.getElementById("light-theme");
-const lightbtn = document.getElementById('light')
-console.log(lightTheme)
+const lightbtn = document.getElementById("light");
+console.log(lightTheme);
 
-
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    lightTheme.innerHTML = `<link rel="stylesheet" href="style.css">`    
+if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
+  lightTheme.innerHTML = `<link rel="stylesheet" href="style.css">`;
 } else {
-    lightTheme.innerHTML = `<link rel="stylesheet" href="light.css">`;
+  lightTheme.innerHTML = `<link rel="stylesheet" href="light.css">`;
 }
-
-
 
 // lightTheme.innerHTML = '<link rel="stylesheet" href="light.css" id="light-theme">'
-function theme(){
-    if (lightTheme.href == "style.css") {
-        lightTheme.href = "light.css"
-    } else {
-        lightTheme.href = "style.css"
-    }
+function theme() {
+  if (lightTheme.href == "style.css") {
+    lightTheme.href = "light.css";
+  } else {
+    lightTheme.href = "style.css";
+  }
 }
-lightbtn.addEventListener('click', theme)
+lightbtn.addEventListener("click", theme);
+
+//  ===============     PortFolio Posts     ===================
+
+// const postParent = document.getElementById("post-parent");
+// const post = postCardTemplate(data[0]);
+
+// postParent.appendChild(post);
