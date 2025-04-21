@@ -277,10 +277,12 @@ section {
   height: 100vh;
   width: 100%;
   background: var(--bg-color2) url(img/shoaib_steave_pose_about_bg.png) fixed;
-  background-color: #030a2e;
   background-size: cover;
   background-repeat: no-repeat;
-  background-blend-mode: overlay;
+  /* background-color: #030a2e;
+  background-blend-mode: overlay; */
+  background-color: #0309fe;
+  background-blend-mode: multiply;
   background-position-x: right;
   background-position-y: top;
   display: grid;
