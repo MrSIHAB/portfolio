@@ -1,5 +1,5 @@
-const postCardTemplate = ({ imgSrc, title, description, link }) => {
-  return `
+export const postCardTemplate = ({ imgSrc, title, description, link }) => {
+    return `
         <div class="card">
                 <img src="${imgSrc}" alt="post" loading="lazy">
                 <div class="info">
@@ -18,5 +18,3 @@ const postCardTemplate = ({ imgSrc, title, description, link }) => {
             </div>
         `;
 };
-
-export default { postCardTemplate };
