@@ -29,6 +29,19 @@ const data = [
               Available on VS-Code marketplace. See more on github...`,
     link: "https://github.com/MrSIHAB/vscode-mathab",
   },
+  {
+    imgSrc: "img/cryptora-vpn.png",
+    title: "Cryptora VPN",
+    description: `
+      Cryptora VPN was a Freelancer.com project For my client.
+      This was a vpn built with WireGuard protocol with a lots of features.
+      Such as Split-Tunneling, Speed Test, TV and Mobile responsiveness and so on.
+      <br />
+      See more...
+      `,
+    link:
+      "https://www.freelancer.com/portfolio-items/10530266-cryptora-vpn-wireguard-protocol",
+  },
 ];
 
 const PortfolioParent = document.getElementById("post-parent");
@@ -39,7 +52,7 @@ const postCardTemplate = ({ imgSrc, title, description, link }) => {
                 <div class="info">
                     <h5>${title}</h5>
                     <p>
-                     <airticle>${description}</airticle>
+                     <article>${description}</article>
                     </p>
                     <a href="${link}">
                         <button class="btn">
